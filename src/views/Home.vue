@@ -47,6 +47,8 @@
 
 import 'swiper/dist/css/swiper.css'
 import { swiper, swiperSlide } from 'vue-awesome-swiper'
+import axios from "axios";
+import url from "@/service.config.js";
 
 export default {
   data(){
@@ -139,83 +141,23 @@ export default {
         slidesPerView:3
       },
       varietyItem:[//推荐商品
-        {
-          name:"沙雕一号",
-          img:
-            "https://ss3.baidu.com/9fo3dSag_xI4khGko9WTAnF6hhy/image/h%3D300/sign=4482be3a8994a4c21523e12b3ef41bac/a8773912b31bb0516a13ec1d387adab44aede0d4.jpg"
-          ,
-          price: "3260",
-          company:" 沙雕一号的公司",
-          city: "沙雕城"
-        },
-        {
-          name:"沙雕2号",
-          img:
-            "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1551524458730&di=06057b2d9893ee50ef22bc98b2b45c5e&imgtype=0&src=http%3A%2F%2Fc.hiphotos.baidu.com%2Fimage%2Fpic%2Fitem%2Ff3d3572c11dfa9ec38b70a226cd0f703918fc16e.jpg"
-          ,
-          price: "3260",
-          company:" 沙雕2号的公司",
-          city: "沙雕城"
-        },
-        {
-          name:"沙雕一号",
-          img:
-            "https://ss3.baidu.com/9fo3dSag_xI4khGko9WTAnF6hhy/image/h%3D300/sign=4482be3a8994a4c21523e12b3ef41bac/a8773912b31bb0516a13ec1d387adab44aede0d4.jpg"
-          ,
-          price: "3260",
-          company:" 沙雕一号的公司",
-          city: "沙雕城"
-        },
-        {
-          name:"沙雕2号",
-          img:
-            "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1551524458730&di=06057b2d9893ee50ef22bc98b2b45c5e&imgtype=0&src=http%3A%2F%2Fc.hiphotos.baidu.com%2Fimage%2Fpic%2Fitem%2Ff3d3572c11dfa9ec38b70a226cd0f703918fc16e.jpg"
-          ,
-          price: "3260",
-          company:" 沙雕2号的公司",
-          city: "沙雕城"
-        },{
-          name:"沙雕一号",
-          img:
-            "https://ss3.baidu.com/9fo3dSag_xI4khGko9WTAnF6hhy/image/h%3D300/sign=4482be3a8994a4c21523e12b3ef41bac/a8773912b31bb0516a13ec1d387adab44aede0d4.jpg"
-          ,
-          price: "3260",
-          company:" 沙雕一号的公司",
-          city: "沙雕城"
-        },
-        {
-          name:"沙雕2号",
-          img:
-            "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1551524458730&di=06057b2d9893ee50ef22bc98b2b45c5e&imgtype=0&src=http%3A%2F%2Fc.hiphotos.baidu.com%2Fimage%2Fpic%2Fitem%2Ff3d3572c11dfa9ec38b70a226cd0f703918fc16e.jpg"
-          ,
-          price: "3260",
-          company:" 沙雕2号的公司",
-          city: "沙雕城"
-        },
-        {
-          name:"沙雕一号",
-          img:
-            "https://ss3.baidu.com/9fo3dSag_xI4khGko9WTAnF6hhy/image/h%3D300/sign=4482be3a8994a4c21523e12b3ef41bac/a8773912b31bb0516a13ec1d387adab44aede0d4.jpg"
-          ,
-          price: "3260",
-          company:" 沙雕一号的公司",
-          city: "沙雕城"
-        },
-        {
-          name:"沙雕2号",
-          img:
-            "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1551524458730&di=06057b2d9893ee50ef22bc98b2b45c5e&imgtype=0&src=http%3A%2F%2Fc.hiphotos.baidu.com%2Fimage%2Fpic%2Fitem%2Ff3d3572c11dfa9ec38b70a226cd0f703918fc16e.jpg"
-          ,
-          price: "3260",
-          company:" 沙雕2号的公司",
-          city: "沙雕城"
-        }
+        
       ]
     }
   },
   components:{
     swiper,
     swiperSlide
+  },
+  created(){
+    // axios.get('https://bird.ioliu.cn/v2?url=https://api.douban.com/v2/movie/top250').then(res=>{
+    //     console.log(res);
+    // }); 
+
+    let url1 = url.getVarietyItem;
+    axios.get(url1).then(res=>{
+      this.varietyItem = res.data;
+    })
   }
 }
 </script>

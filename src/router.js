@@ -4,6 +4,9 @@ import Cart from './views/Cart.vue'
 import Category from './views/Category.vue'
 import Home from './views/Home.vue'
 import Profile from './views/Profile.vue'
+import Ajax from './views/Ajax.vue'
+
+
 
 Vue.use(Router)
 
@@ -28,6 +31,11 @@ export default new Router({
       path: '/profile',
       name: 'profile',
       component: Profile
+    },
+    {
+      path:'/ajax',
+      name:'ajax',
+      component:Ajax
     }
   ]
 })

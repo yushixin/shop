@@ -3,6 +3,7 @@ import App from './App.vue'
 import router from './router'
 import store from './store'
 
+
 Vue.config.productionTip = false
 
 
@@ -13,6 +14,8 @@ import '@/assets/css/react.css'//引入样式重试
 //Button 按钮、Icon 图标、NavBar 导航栏、 Tabbar+TabbarItem 底部导航 、 Swipe, SwipeItem 轮播图
 import {Button,Icon ,NavBar , Tabbar, TabbarItem,Swipe, SwipeItem,Lazyload } from 'vant';
 Vue.use(Button).use(Icon).use(NavBar).use(Tabbar).use(TabbarItem).use(Swipe).use(SwipeItem).use(Lazyload);
+
+import '@/mock/mock.js';
 
 // import Vant from 'vant';//引入vant组件库
 // import 'vant/lib/index.css';
