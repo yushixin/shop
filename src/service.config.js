@@ -5,6 +5,7 @@ const URL = {
     getHotProduct: MOCKURL + 'getHotProduct',
     
     registUser: SERVERURL + 'user/registUser',
+    loginUser: SERVERURL + 'user/loginUser'
 };
 
 export default URL;
