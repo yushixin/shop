@@ -5,6 +5,9 @@
 </template>
 
 <script>
+import axios from 'axios'
+import url from "@/service.config.js";
+
   export default {
     
   }

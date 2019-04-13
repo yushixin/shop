@@ -1,41 +1,23 @@
 <template>
   <div id="app">
     <router-view></router-view>
-    <van-tabbar v-model="active" class="footer-bar">
-      <van-tabbar-item icon="home-o"  to="/">首页</van-tabbar-item>
-      <van-tabbar-item icon="records" to="/category">分类</van-tabbar-item>
-      <van-tabbar-item icon="cart"    to="/cart">购物车</van-tabbar-item>
-      <van-tabbar-item icon="contact" to="/profile">我的</van-tabbar-item>
-    </van-tabbar>
+    <!-- <footer-bar></footer-bar> -->
+    <router-view name="footer-bar"></router-view>
 
   </div>
 </template>
 
 <script>
+// import FooterBar from '@/components/FooterBar.vue'
+
 export default {
-  date(){
-    return{
-      active: 0
-    }
-  }
+  // components:{
+  //   FooterBar
+  // }
+
 }
 </script>
 
 
-<style lang="scss">
-
-
-  .footer-bar{
-    display: flex;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    height: 1rem;
-    line-height: 1rem;
-    &-item{
-      flex-grow: 1;
-      text-align: center;
-    }
-  }
-
+<style lang="scss" scoped>
 </style>
