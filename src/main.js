@@ -12,12 +12,20 @@ import '@/assets/css/react.css'//引入样式重试
 
 //按需引入组件
 //Button 按钮、Icon 图标、NavBar 导航栏、 Tabbar+TabbarItem 底部导航 、 Swipe, SwipeItem 轮播图
-import {GoodsAction,
+import {
+  SubmitBar,
+  Card ,
+  GoodsAction,
   GoodsActionBigBtn,
-  GoodsActionMiniBtn,PullRefresh,List,Col,Row,Toast,Field,Cell,CellGroup,Tab,Tabs,Button,Icon ,NavBar , Tabbar, TabbarItem,Swipe, SwipeItem,Lazyload } from 'vant';
-Vue.use(GoodsAction)
+  GoodsActionMiniBtn,PullRefresh,List,Col,Row,Toast,Field,Cell,CellGroup,
+  Tab,Tabs,Button,Icon ,NavBar , Tabbar, TabbarItem,Swipe, SwipeItem,Lazyload } from 'vant';
+Vue
+.use(SubmitBar)
+.use(Card)
+.use(GoodsAction)
 .use(GoodsActionBigBtn)
-.use(GoodsActionMiniBtn).use(PullRefresh).use(List).use(Col).use(Row).use(Toast).use(Field).use(Cell).use(CellGroup).use(Tab).use(Tabs).use(Button).use(Icon).use(NavBar).use(Tabbar).use(TabbarItem).use(Swipe).use(SwipeItem).use(Lazyload);
+.use(GoodsActionMiniBtn).use(PullRefresh).use(List).use(Col).use(Row).use(Toast).use(Field).use(Cell).use(CellGroup)
+.use(Tab).use(Tabs).use(Button).use(Icon).use(NavBar).use(Tabbar).use(TabbarItem).use(Swipe).use(SwipeItem).use(Lazyload);
 
 import '@/mock/mock.js';
 

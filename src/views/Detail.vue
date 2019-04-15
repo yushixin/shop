@@ -77,8 +77,24 @@ import { mapState } from "vuex";
                         this.$router.push('/profile');
                     },1000)
                 }else{
-                    //插入购物车
-                    
+                    // 插入购物车
+                    axios({
+                        url: url.addCart,
+                        method: "post",
+                        data: {
+                            productId: this.detail._id,
+                            userId: this.userInfo._id
+                        }
+                    })
+                    .then(res => {
+                        // console.log(res);
+                        if(res.data.code == 200 ){
+                            this.$toast.success(res.data.message);
+                        }
+                    })
+                    .catch(err => {
+                        console.log(err);
+                    });
                 }
 
             }

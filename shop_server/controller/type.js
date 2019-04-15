@@ -22,6 +22,7 @@ router.get('/insertType', async (ctx) => {
     ctx.body = '导入数据';
 });
 router.get('/getTypes',async(ctx)=>{
+    // console.log('111');
     const Type = mongoose.model('Type');
     await Type.find({}).exec().then(res=>{
         ctx.body = res;
