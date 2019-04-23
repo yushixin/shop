@@ -1,5 +1,5 @@
 <template>
-  <van-tabbar v-model="active" >
+  <van-tabbar v-model="active" @change="change">
     <van-tabbar-item icon="home-o" to="/">首页</van-tabbar-item>
     <van-tabbar-item icon="records" to="/category">分类</van-tabbar-item>
     <van-tabbar-item icon="cart" to="/cart">购物车</van-tabbar-item>
@@ -8,6 +8,8 @@
 </template>
 
 <script>
+import { mapState } from "vuex";
+
 export default {
   data() {
     return {
@@ -15,12 +17,13 @@ export default {
     };
   },
   created(){
-    // this.active = parseInt(localStorage.getItem('active'));
+    this.active = parseInt(localStorage.getItem('active'));
   },
   methods: {
-    // change(active){
-    //   localStorage.setItem('active', active);
-    // }
+    change(active){
+      localStorage.setItem('active', active);
+      // console.log(active);
+    }
   }
 };
 </script>
