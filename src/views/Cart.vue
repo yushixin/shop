@@ -44,6 +44,7 @@ import { mapState } from "vuex";
           this.$router.push('/profile');
         },1000)
       }else{
+        console.log(this.userInfo._id);
         axios({
           url:url.getCart,
           method: "get",

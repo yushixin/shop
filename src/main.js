@@ -3,9 +3,7 @@ import App from './App.vue'
 import router from './router'
 import store from './store'
 
-
 Vue.config.productionTip = false
-
 
 import '@/assets/js/rem.js'//引入rem
 import '@/assets/css/react.css'//引入样式重试

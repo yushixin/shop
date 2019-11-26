@@ -50,6 +50,7 @@ export default {
         }
       })
         .then(res => {
+          console.log(res)
           if(res.data.code == 200){
             this.$toast.success('注册成功');
             this.registUsername = this.registPassword = '';
@@ -75,7 +76,7 @@ export default {
         .then(res => {
           if (res.data.code == 200) {
             // 模拟
-            new Promise((resolve, reject) => {
+            new Promise((resolve,reject) => {
               setTimeout(() => {
                 resolve();
               }, 1000);
